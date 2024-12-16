@@ -9,7 +9,29 @@ public class SpellChecker
       private String[] dictionary;
       
       // WRITE Your Methods HERE!
-
+      public void print10(){
+        for(int i=0;i<10;i++){
+          System.out.println(dictionary[i]);
+        }
+      }
+      public boolean spellCheck(String s){
+        for(int i=0;i<dictionary.length; i++){
+          if(s.equals(dictionary[i])){
+            return true;
+          }
+        }
+        return false;
+      }
+      public void printStartsWith(String s){
+        int len=s.length();
+        for(int i=0;i<dictionary.length;i++){
+          String full=dictionary[i];
+          String clip=full.substring(0,len);
+          if(s.equals(clip)){
+            System.out.println(full);
+          }
+        }
+      }
 
 
 
