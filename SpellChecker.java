@@ -15,8 +15,8 @@ public class SpellChecker
         }
       }
       public boolean spellCheck(String s){
-        for(int i=0;i<dictionary.length; i++){
-          if(s.equals(dictionary[i])){
+        for(String i:dictionary){
+          if(s.equals(i)){
             return true;
           }
         }
