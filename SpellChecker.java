@@ -23,12 +23,10 @@ public class SpellChecker
         return false;
       }
       public void printStartsWith(String s){
-        int len=s.length();
-        for(int i=0;i<dictionary.length;i++){
-          String full=dictionary[i];
-          String clip=full.substring(0,len);
-          if(s.equals(clip)){
-            System.out.println(full);
+        for(String i: dictionary){
+          String let=i.substring(0,1);
+          if(let.equals(s)){
+            System.out.println(i);
           }
         }
       }
